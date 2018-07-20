@@ -21,6 +21,9 @@ Will put in more features on the go :)
 TBD ... 
 
 ## Development Stack
+* Sanic
+* SQLAlchemy
+* Alembic
 
 TBD ...
 

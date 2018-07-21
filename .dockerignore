@@ -1,0 +1,15 @@
+.git
+.gitignore
+LICENSE
+Dockerfile
+.dockerignore
+docker-compose.yml
+tests
+*.pyc
+*.swo
+*.swp
+*.log
+.DS_Store
+.python-version
+.idea
+__pycache__

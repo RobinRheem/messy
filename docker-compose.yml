@@ -9,6 +9,8 @@ services:
           MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
     messy:
         build: .
+        environment:
+            RELOAD: "--reload"
         ports:
         - "8000:8000"
         volumes:

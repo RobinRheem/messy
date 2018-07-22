@@ -20,5 +20,5 @@ ADD . $MESSY_HOME
 
 EXPOSE 8000
 
-ENTRYPOINT ["python3", "app.py"]
+ENTRYPOINT ["gunicorn", "app:app", "-c", "gunicorn.py", "--reload"]
 

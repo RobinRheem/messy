@@ -24,8 +24,8 @@ TBD ...
 * Sanic
 * SQLAlchemy
 * Alembic
-
-TBD ...
+* Gunicorn
+* MySQL
 
 ## Contribution
 Just hand in a pull request and some test code! I'll review it and lets go for it!

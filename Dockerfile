@@ -8,7 +8,7 @@ ENV LANG C.UTF-8
 
 RUN ["pip3", "install", "pipenv"]
 
-ENV MESSY_HOME /app/src/messy/
+ENV MESSY_HOME /app/src/messy
 WORKDIR $MESSY_HOME
 
 COPY Pipfile Pipfile

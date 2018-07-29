@@ -8,6 +8,7 @@ sanic = "*"
 sqlalchemy = "*"
 alembic = "*"
 gunicorn = "*"
+pymysql = "*"
 
 [dev-packages]
 

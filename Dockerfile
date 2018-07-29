@@ -2,6 +2,7 @@ FROM python:3.6.6-alpine3.8
 
 # Add GCC Support for alpine releases
 RUN apk add build-base
+RUN apk add libffi-dev openssl-dev
 
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8

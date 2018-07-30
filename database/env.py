@@ -11,16 +11,20 @@ config = context.config
 # This line sets up loggers basically.
 fileConfig(config.config_file_name)
 
+# FIXME: This is just a hack to get the import level matched
+import os, sys
+sys.path.insert(0, os.path.realpath(os.path.join(os.path.dirname(__file__), '..')))
+
 # add your model's MetaData object here
 # for 'autogenerate' support
-# from myapp import mymodel
-# target_metadata = mymodel.Base.metadata
-target_metadata = None
+from messy import Base
+target_metadata = Base.metadata
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
-# my_important_option = config.get_main_option("my_important_option")
-# ... etc.
+# Set sqlalchemy url programatically over here. 
+# TODO: Will give environment changes soon
+config.set_main_option('sqlalchemy.url', "mysql+pymysql://root:@db/messy?charset=utf8mb4")
 
 
 def run_migrations_offline():

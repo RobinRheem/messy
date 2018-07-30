@@ -1,4 +1,4 @@
-from base import Base
+from messy import Base
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, Text, ForeignKey
 from sqlalchemy.orm import relationship
 

@@ -6,11 +6,11 @@ from sqlalchemy.orm import relationship
 class Chatroom(Base):
     __tablename__ = 'chatrooms'
     id = Column(Integer, primary_key=True)
-    title = Column(String)
+    title = Column(String(200))
     member_limit = Column(Integer)
     private = Column(Boolean)
-    password = Column(String)
-    type = Column(String)
+    password = Column(String(200))
+    type = Column(String(50))
     updated_at = Column(DateTime)
     created_at = Column(DateTime)
     deleted_at = Column(DateTime)
@@ -24,7 +24,7 @@ class ChatroomMessage(Base):
     user_id = Column(Integer)
     chatroom_id = Column(Integer, ForeignKey('chatrooms.id'))
     message = Column(Text)
-    type = Column(String)
+    type = Column(String(50))
     updated_at = Column(DateTime)
     created_at = Column(DateTime)
 

@@ -8,7 +8,7 @@ class ChatroomMember(Base):
     user_id = Column(Integer)
     chatroom_id = Column(Integer, ForeignKey('chatrooms.id'))
     notification = Column(Boolean)
-    role = Column(String)
+    role = Column(String(50))
     updated_at = Column(DateTime)
     created_at = Column(DateTime)
 
